@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+
+	<!-- c3p0默认配置，下面还可以配置多个数据库 -->
+	<default-config>
+		<property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/practical
+		</property>
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="user">root</property>
+		<property name="password">123456</property>
+		<!-- 连接池初始化时创建的连接数 -->
+		<property name="initialPoolSize">5</property>
+		<!-- 连接池中的最小连接数 -->
+		<property name="minPoolSize">1</property>
+		<!-- 连接池中的最大连接数 -->
+		<property name="maxPoolSize">10</property>
+		<!-- 无空闲连接可用时，可一次性创建新连接的数量 -->
+		<property name="acquireIncrement">1</property>
+		<!-- 获取数据库连接失败后重复尝试的次数 -->
+		<property name="acquireRetryAttempts">1</property>
+		<!-- 两次连接的间隔时间，单位为毫秒 -->
+		<property name="acquireRetryDelay">1000</property>
+	</default-config>
+
+</c3p0-config>
