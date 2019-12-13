@@ -14,7 +14,7 @@ public class DButil {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			//通过java驱动管理类，获得mysql驱动管理类的对象
-			connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/mytest", "root", "123456");
+			connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/practical", "root", "123456");
 			System.out.println("连接成功");
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block

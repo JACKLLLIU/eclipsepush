@@ -10,15 +10,15 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import bean.Users;
 import until.DButil;
+import until.JDBCuntil;
 
 public class DAOtest {
 	
-	public static boolean selectID() throws SQLException {
+	public static boolean selectID(String username,String psd) throws SQLException {
 		Connection con = DButil.getConnection();
-		String sql = "select s.course_id,AVG(s.score) avgscore,MAX(s.score) maxscore,MIN(s.score) minscore from score s GROUP BY s.student_id";
+		String sql = "";
 		QueryRunner queryRunner = new QueryRunner();
 		queryRunner.query(con, sql,new BeanListHandler<>(Users.class));
-		
 		con.close();
 		return false;
 	}

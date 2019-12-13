@@ -20,9 +20,7 @@ import bean.Users;
 public class Chill extends HttpServlet {
 	static List<Users> userList = new ArrayList<Users>();
 	static {
-		userList.add(new Users("刘备", "123"));
-		userList.add(new Users("关羽", "123"));
-		userList.add(new Users("刘备", "321"));
+
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
