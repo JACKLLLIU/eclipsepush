@@ -45,24 +45,24 @@ public class LoginServlet extends HttpServlet {
 				HttpSession session = request.getSession();
 				session.setAttribute("user", user);
 				Cookie cookie = new Cookie("jsession", session.getId());
-				// cookie.setMaxAge(60 * 60 * 24);
+				cookie.setMaxAge(60 * 60 * 24);
 				response.addCookie(cookie);
 				// response.sendRedirect();
 				Message.success().toString();
 				String json = new ObjectMapper()
-						.writeValueAsString(Message.success().add("url", "fristshow.html"));
+						.writeValueAsString(Message.success().add("url", "fristshow.jsp"));
 				response.getWriter().write(json);
 			}
 			if (admin != null) {
 				HttpSession session = request.getSession();
 				session.setAttribute("admin", admin);
 				Cookie cookie = new Cookie("jsession", session.getId());
-				// cookie.setMaxAge(60 * 60 * 24);
+				cookie.setMaxAge(60 * 60 * 24);
 				response.addCookie(cookie);
 				// response.sendRedirect();
 				Message.success().toString();
 				String json = new ObjectMapper()
-						.writeValueAsString(Message.success().add("url", "fristshow.html"));
+						.writeValueAsString(Message.success().add("url", "fristshow.jsp"));
 				response.getWriter().write(json);
 			}
 

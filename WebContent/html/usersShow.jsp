@@ -77,10 +77,10 @@
 				<div class="scroll-sidebar">
 					<nav class="sidebar-nav">
 						<ul id="sidebarnav">
-							<li class="active">
+							<li>
 								<a class="waves-effect waves-dark" href="fristshow.jsp" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">主页面</span></a>
 							</li>
-							<li>
+							<li class="active">
 								<a class="waves-effect waves-dark" href="usersShow.jsp" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">用户信息</span></a>
 							</li>
 							<li>

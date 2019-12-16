@@ -26,7 +26,7 @@ public class Userservlet extends HttpServlet {
 		String age = request.getParameter("age");
 		String phone= request.getParameter("phone");
 		String sex = "";
-		if(id==null) {
+		if(id==null||id=="") {
 			return;
 		}
 		if(0==Integer.parseInt(selector)) {

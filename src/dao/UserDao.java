@@ -13,13 +13,6 @@ import bean.users;
 import until.JDBCuntil;
 
 public class UserDao {
-	public static DataSource ds = null;
-	// 初始化C3P0数据源
-	static {
-		// 使用c3p0-config.xml配置文件中的named-config节点中name属性的值
-		ComboPooledDataSource cpds = new ComboPooledDataSource();
-		ds = cpds;
-	}
 	
 	public static boolean updateUser(String tname,String licenseplate,String age,String sex,String telephone,String id) {
 		Connection con = null;

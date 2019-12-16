@@ -123,7 +123,7 @@
 				var username = $("#username").val();
 				var password = $("#password").val();
 				var selector = $("#selector").val();
-				if(username==""||password==""){
+				if(username==""||password==""||username==null||password==null){
 					alert("你有输入没有正确输入！！请重新进行登录！！");
 					return
 				}
