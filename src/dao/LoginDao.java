@@ -16,13 +16,6 @@ import until.DButil;
 import until.JDBCuntil;
 
 public class LoginDao {
-	public static DataSource ds = null;
-	// 初始化C3P0数据源
-	static {
-		// 使用c3p0-config.xml配置文件中的named-config节点中name属性的值
-		ComboPooledDataSource cpds = new ComboPooledDataSource();
-		ds = cpds;
-	}
 
 	public static admin queryAdmin(String username, String password) {
 		Connection con = null;
@@ -85,6 +78,29 @@ public class LoginDao {
 			e.printStackTrace();
 		}
 		return false;
+	}
+	
+	public static admin queryAdminById(int id) {
+		Connection con = null;
+		String sql = "select * from admin where admin.id = ?";
+		admin admin = null;
+		try {
+			con = JDBCuntil.getConnection();
+			PreparedStatement pres = con.prepareStatement(sql);
+			pres.setInt(1, id);
+			ResultSet rs = pres.executeQuery();
+			if(rs.next()) {
+				admin = new admin();
+				admin.setId(rs.getInt("id"));
+				admin.setAdminname(rs.getString("adminname"));
+				admin.setTelephone(rs.getString("telephone"));
+			}
+			return admin;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }

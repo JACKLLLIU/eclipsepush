@@ -117,8 +117,7 @@
 								class="fa fa-cog" aria-hidden="true"></i></a>
 							<div class="dropdown-menu " style="min-width: 125px;">
 								<a class="dropdown-item" href="#">退出登录</a> <a
-									class="dropdown-item" href="#">修改密码</a> <a
-									class="dropdown-item" href="modperson.jsp">个人信息</a>
+									class="dropdown-item" href="#">修改密码</a> 
 							</div></li>
 					</ul>
 
@@ -129,16 +128,16 @@
 			<div class="scroll-sidebar">
 				<nav class="sidebar-nav">
 					<ul id="sidebarnav">
-						<li><a class="waves-effect waves-dark" href="fristshow.jsp"
-							aria-expanded="false"><i class="fa fa-tachometer"></i><span
-								class="hide-menu">主页面</span></a></li>
+						<li><a class="waves-effect waves-dark" href="modperson.jsp"
+							aria-expanded="false"><i class="fa fa-address-card-o"></i><span
+								class="hide-menu">个人信息</span></a></li>
 						<li><a class="waves-effect waves-dark" href="usersShow.jsp"
 							aria-expanded="false"><i class="fa fa-users"></i><span
 								class="hide-menu">用户信息</span></a></li>
 						<li class="active"><a class="waves-effect waves-dark"
 							href="parkinfo.jsp" aria-expanded="false"><i
 								class="fa fa-car"></i><span class="hide-menu">车库信息</span></a></li>
-						<li><a class="waves-effect waves-dark" href="subscribe.jsp"
+						<li><a class="waves-effect waves-dark" href="../QSubServlet?id=${user.id}"
 							aria-expanded="false"><i class="fa fa-smile-o"></i><span
 								class="hide-menu">车库操作</span></a></li>
 						<li><a class="waves-effect waves-dark" href="#"

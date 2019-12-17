@@ -57,7 +57,11 @@
 					<!--  -->
 					<div style="height: 74px;" class="navbar-collapse">
 						<ul class="navbar-nav mr-auto">
-							<li class="nav-item"><h3>欢迎用户<font color="red">${user.username }</font>来到系统</h3></li>
+							<li class="nav-item">
+								<h3>
+									欢迎<font color="red">${user.username }${admin.adminname}</font>来到系统
+								</h3>
+							</li>
 						</ul>
 						<ul class="navbar-nav" style="float: right;">
 							<li class="nav-item dropdown" style="">
@@ -77,8 +81,8 @@
 				<div class="scroll-sidebar">
 					<nav class="sidebar-nav">
 						<ul id="sidebarnav">
-							<li class="active">
-								<a class="waves-effect waves-dark" href="fristshow.jsp" aria-expanded="false"><i class="fa fa-tachometer"></i><span class="hide-menu">主页面</span></a>
+							<li>
+								<a class="waves-effect waves-dark" href="modperson.jsp" aria-expanded="false"><i class="fa fa-address-card-o"></i><span class="hide-menu">个人信息</span></a>
 							</li>
 							<li>
 								<a class="waves-effect waves-dark" href="usersShow.jsp" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">用户信息</span></a>
@@ -87,7 +91,7 @@
 								<a class="waves-effect waves-dark" href="parkinfo.jsp" aria-expanded="false"><i class="fa fa-car"></i><span class="hide-menu">车库信息</span></a>
 							</li>
 							<li>
-								<a class="waves-effect waves-dark" href="subscribe.jsp" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">车库操作</span></a>
+								<a class="waves-effect waves-dark" href="../QSubServlet?id=${user.id}" aria-expanded="false"><i class="fa fa-smile-o"></i><span class="hide-menu">车库操作</span></a>
 							</li>
 							<li>
 								<a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-file-text" aria-hidden="true"></i><span class="hide-menu">出入记录</span></a>
