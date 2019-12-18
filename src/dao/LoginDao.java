@@ -22,7 +22,6 @@ public class LoginDao {
 		try {
 			con = JDBCuntil.getConnection();
 		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		String sql = "select * from admin where adminname ='" + username + "' and adminpsd ='" + password + "'";
@@ -64,6 +63,33 @@ public class LoginDao {
 		return user;
 	}
 	
+	public static boolean queryUser(int id,String psd1,String psd2) {
+		Connection con = null;
+		String sql1 = "select 1 from users where users.id =? and users.password =? ";
+		String sql2 = "UPDATE users set users.`password` = ? where users.id = ?";
+		try {
+			con = JDBCuntil.getConnection();
+			PreparedStatement pres = con.prepareStatement(sql1);
+			pres.setInt(1, id);
+			pres.setString(2, psd1);
+			boolean a = pres.execute();
+			PreparedStatement pres1 = con.prepareStatement(sql2);
+			pres1.setString(1, psd2);
+			pres1.setInt(2, id);
+			int b = pres1.executeUpdate();
+			if(a) {
+				if(b>0) {
+					return true;
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		 
+		return false;
+	}
+	
+	
 	public static boolean addUser(String username, String password) {
 		Connection con = null;
 		String sql = "insert into users(username,password) VALUES('"+username+"','"+password+"')";
@@ -97,7 +123,6 @@ public class LoginDao {
 			}
 			return admin;
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;

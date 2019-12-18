@@ -138,7 +138,6 @@
 						selector:selector
 					},
 					success:function(result){
-						alert(result.extend.url);
 						window.location.href = result.extend.url;
 						return;
 					},

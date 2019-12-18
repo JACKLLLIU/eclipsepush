@@ -117,7 +117,7 @@
 								class="fa fa-cog" aria-hidden="true"></i></a>
 							<div class="dropdown-menu " style="min-width: 125px;">
 								<a class="dropdown-item" href="#">退出登录</a> <a
-									class="dropdown-item" href="#">修改密码</a> 
+									class="dropdown-item" href="changepsw.jsp">修改密码</a> 
 							</div></li>
 					</ul>
 
@@ -139,7 +139,11 @@
 								class="fa fa-car"></i><span class="hide-menu">车库信息</span></a></li>
 						<li><a class="waves-effect waves-dark" href="../QSubServlet?id=${user.id}"
 							aria-expanded="false"><i class="fa fa-smile-o"></i><span
-								class="hide-menu">车库操作</span></a></li>
+								class="hide-menu">我的预约</span></a></li>
+						<li class=""><a class="waves-effect waves-dark"
+							href="${pageContext.request.contextPath}/QoccupyServlet?id=${user.id}"
+							aria-expanded="false"><i class="fa fa-street-view"></i><span
+								class="hide-menu">占有车位</span></a></li>
 						<li><a class="waves-effect waves-dark" href="#"
 							aria-expanded="false"><i class="fa fa-file-text"
 								aria-hidden="true"></i><span class="hide-menu">出入记录</span></a></li>
@@ -343,6 +347,10 @@
 			function subscribe(rowid, status) {
 				if (status == 2) {
 					alert("该位置已被预约，不能重复预约");
+					return;
+				}
+				if(status == 1){
+					alert("该位置已被占有，不能预约");
 					return;
 				}
 

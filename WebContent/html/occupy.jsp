@@ -9,18 +9,18 @@
 <meta charset="utf-8">
 <title>AdminWrap - Easy to Customize Bootstrap 4 Admin Template</title>
 <link rel="icon" type="image/png" sizes="16x16"
-	href="../assets/images/favicon.png">
-<link href="../assets/node_modules/bootstrap/css/bootstrap.min.css"
+	href="${pageContext.request.contextPath}/assets/images/favicon.png">
+<link href="${pageContext.request.contextPath}/assets/node_modules/bootstrap/css/bootstrap.min.css"
 	rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/colors/default.css" id="theme" rel="stylesheet">
-<script src="../assets/node_modules/jquery/jquery.min.js"></script>
-<script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
-<script src="../assets/node_modules/bootstrap/js/bootstrap.min.js"></script>
-<script src="js/perfect-scrollbar.jquery.min.js"></script>
-<script src="js/waves.js"></script>
-<script src="js/sidebarmenu.js"></script>
-<script src="js/custom.min.js"></script>
+<link href="${pageContext.request.contextPath}/html/css/style.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/html/css/colors/default.css" id="theme" rel="stylesheet">
+<script src="${pageContext.request.contextPath}/assets/node_modules/jquery/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/node_modules/bootstrap/js/popper.min.js"></script>
+<script src="${pageContext.request.contextPath}/assets/node_modules/bootstrap/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/html/js/perfect-scrollbar.jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/html/js/waves.js"></script>
+<script src="${pageContext.request.contextPath}/html/js/sidebarmenu.js"></script>
+<script src="${pageContext.request.contextPath}/html/js/custom.min.js"></script>
 <style type="text/css">
 .page-titles {
 	background: #f6f9fa;
@@ -47,15 +47,15 @@
 				<div style="border-bottom: 1px solid rgba(120, 130, 140, 0.13);"
 					class="navbar-header">
 					<a class="navbar-brand" href="fristshow.html"> <b> <img
-							style="height: 40px; width: 45px;" src="../assets/images/car.jpg"
+							style="height: 40px; width: 45px;" src="${pageContext.request.contextPath}/assets/images/car.jpg"
 							alt="homepage" class="dark-logo" /> <img
 							style="height: 20px; width: 100px;"
-							src="../assets/images/logo-light-icon.png" alt="homepage"
+							src="${pageContext.request.contextPath}/assets/images/logo-light-icon.png" alt="homepage"
 							class="light-logo" />
 					</b> <span> <img style="height: 50px; width: 180px;"
-							src="../assets/images/partcar.png" alt="homepage"
+							src="${pageContext.request.contextPath}/assets/images/partcar.png" alt="homepage"
 							class="dark-logo" /> <img
-							src="../assets/images/logo-light-text.png" class="light-logo"
+							src="${pageContext.request.contextPath}/assets/images/logo-light-text.png" class="light-logo"
 							alt="homepage" />
 					</span>
 					</a>
@@ -65,13 +65,13 @@
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item">
 							<h3>
-								欢迎<font color="red">${user.username }${admin.adminname}</font>来到系统
-							</h3> 
-							<input id="admin_id" style="display: none;" type="text"
-							disabled="disabled" value="${admin.id}" /> 
-							<input id="user_id" style="display: none;" type="text" disabled="disabled"
-							value="${user.id}" />
+								欢迎<font color="red">${user.username}${admin.adminname}</font>来到系统
+							</h3>
 						</li>
+						<input id="admin_id" style="display: none;" type="text"
+							disabled="disabled" value="${admin.id}" />
+						<input id="user_id" style="display: none;" type="text"
+							disabled="disabled" value="${user.id}" />
 					</ul>
 					<ul class="navbar-nav" style="float: right;">
 						<li class="nav-item dropdown" style=""><a
@@ -79,7 +79,7 @@
 								class="fa fa-cog" aria-hidden="true"></i></a>
 							<div class="dropdown-menu " style="min-width: 125px;">
 								<a class="dropdown-item" href="#">退出登录</a> <a
-									class="dropdown-item" href="changepsw.jsp">修改密码</a>
+									class="dropdown-item" href="html/changepsw.jsp">修改密码</a> 
 							</div></li>
 					</ul>
 
@@ -90,19 +90,19 @@
 			<div class="scroll-sidebar">
 				<nav class="sidebar-nav">
 					<ul id="sidebarnav">
-						<li><a class="waves-effect waves-dark" href="modperson.jsp"
+						<li><a class="waves-effect waves-dark" href="html/modperson.jsp"
 							aria-expanded="false"><i class="fa fa-address-card-o"></i><span
 								class="hide-menu">个人信息</span></a></li>
-						<li><a class="waves-effect waves-dark" href="usersShow.jsp"
+						<li><a class="waves-effect waves-dark" href="html/usersShow.jsp"
 							aria-expanded="false"><i class="fa fa-users"></i><span
 								class="hide-menu">用户信息</span></a></li>
-						<li><a class="waves-effect waves-dark" href="parkinfo.jsp"
+						<li><a class="waves-effect waves-dark" href="html/parkinfo.jsp"
 							aria-expanded="false"><i class="fa fa-car"></i><span
 								class="hide-menu">车库信息</span></a></li>
-						<li><a class="waves-effect waves-dark"
-							href="../QSubServlet?id=${user.id}" aria-expanded="false"><i
-								class="fa fa-smile-o"></i><span class="hide-menu">我的预约</span></a></li>
 						<li class=""><a class="waves-effect waves-dark"
+							href="${pageContext.request.contextPath}/QSubServlet?id=${user.id}" aria-expanded="false"><i
+								class="fa fa-smile-o"></i><span class="hide-menu">我的预约</span></a></li>
+						<li class="active"><a class="waves-effect waves-dark"
 							href="${pageContext.request.contextPath}/QoccupyServlet?id=${user.id}"
 							aria-expanded="false"><i class="fa fa-street-view"></i><span
 								class="hide-menu">占有车位</span></a></li>
@@ -126,7 +126,7 @@
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="javascript:void(0)">Home</a>
 							</li>
-							<li class="breadcrumb-item active">主页面</li>
+							<li class="breadcrumb-item active">预约</li>
 						</ol>
 					</div>
 				</div>
@@ -134,32 +134,25 @@
 					<!-- Start Notification -->
 					<div class="col-md-12">
 						<div class="card card-body mailbox">
-							<h5 class="card-title">修改密码</h5>
-							<form class="form-horizontal" style="margin: 0 auto;">
-								<div class="form-group col-md-8">
-									<label class="control-label"><h3
-											class="text-themecolor">原密码</h3></label> <input class="form-control"
-										type="text" placeholder="请输入原密码" id="psd1">
-								</div>
-								<div class="form-group col-md-8">
-									<lable class="control-label">
-									<h3 class="text-themecolor">新密码</h3>
-									</lable>
-									<input class="form-control" type="password"
-										placeholder="请输新入密码" id="psd2">
-								</div>
-								<div class="form-group col-md-8">
-									<lable class="control-label">
-									<h3 class="text-themecolor">再次输入新密码</h3>
-									</lable>
-									<input class="form-control" type="password"
-										placeholder="请再次输入密码" id="psd3">
-								</div>
-								<div class="form-group col-md-8">
-									<input type="button" value="提交" class="btn btn-success"
-										onclick="commit()">
-								</div>
-							</form>
+							<h5 class="card-title">我的预约</h5>
+							<div class="message-center ps ps--theme_default ps--active-y"
+								data-ps-id="a045fe3c-cb6e-028e-3a70-8d6ff0d7f6bd">
+								<c:forEach items="${info}" var="var" varStatus="status">
+									<a href="#">
+										<div class="btn btn-danger btn-circle">
+											<i class="fa fa-user-circle-o"></i>
+										</div>
+										<div class="mail-contnet">
+											<span class="mail-desc">用户id为：${var.id}</span>
+											<span class="mail-desc">用户名：${user.username}</span> 
+											<span style="color: red" class="mail-desc">已用车位：${var.location}</span> 
+										</div>
+										<div class="" style="display: inline;">
+											<button class="btn btn-primary btn-sm" onclick="leave('${var.location}');"><i class="fa fa-remove" ></i>取消预约</button>
+										</div>
+									</a>
+								</c:forEach>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -169,37 +162,23 @@
 					- Collect from <a href="http://www.cssmoban.com/" title="网页模板"
 						target="_blank">网页模板</a>
 				</footer>
-
 			</div>
 		</div>
-	</div>
-	<script type="text/javascript">
-		function commit(){
-			var userId = $("#user_id").val();
-			var psd1 = $("#psd1").val();
-			var psd2 = $("#psd2").val();
-			var psd3 = $("#psd3").val();
-			if(psd2!=psd2){
-				alert("2次输入的密码不一致！！");
-				return;
-			}
-			$.ajax({
-				url : "../ResetPsdServlet",
-				data : {
-					id:userId,
-					psd1:psd1,
-					psd2:psd2
-				},
-				type : "POST",
-				dataType : "JSON ",
-				success : function(result) {
-					if(result.code == 100){
-						window.location.href = result.extend.url;
-					}
-				}
-			});
-		}
-	</script>
 </body>
+<script type="text/javascript">
+	function reset(location){
+		$.ajax({
+			url : "/WebTest/",
+			data : {
+				location: location
+			},
+			type : "POST",
+			success : function(result) {
+				alert(result)
+			}
+		});
+	}
+
+</script>
 
 </html>

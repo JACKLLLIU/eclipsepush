@@ -107,4 +107,21 @@ public class UserDao {
 		}
 		return false; 
 	}
+	
+	public static boolean Resetpsd(int id) {
+		Connection con = null; 
+		String sql = "update users SET users.`password` = '123456' where users.id = ?";
+		try {
+			con = JDBCuntil.getConnection();
+			PreparedStatement pres = con.prepareStatement(sql);
+			pres.setInt(1, id);
+			int i = pres.executeUpdate();
+			if(i>0) {
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
 }

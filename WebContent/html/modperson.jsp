@@ -6,85 +6,95 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="utf-8">
-		<title>AdminWrap - Easy to Customize Bootstrap 4 Admin Template</title>
-		<link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-		<link href="../assets/node_modules/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/colors/default.css" id="theme" rel="stylesheet">
-		<link href="../assets/node_modules/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-		<script src="../assets/node_modules/jquery/jquery.min.js"></script>
-		<script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
-		<script src="../assets/node_modules/bootstrap/js/bootstrap.min.js"></script>
-		<script src="../assets/node_modules/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
-		<script src="../assets/node_modules/bootstrap/js/bootstrap-datetimepicker.zh-CN.js"></script>
-		<script src="js/perfect-scrollbar.jquery.min.js"></script>
-		<script src="js/waves.js"></script>
-		<script src="js/sidebarmenu.js"></script>
-		<script src="js/custom.min.js"></script>
-		<style type="text/css">
-			.page-titles {
-				background: #f6f9fa;
-				margin-bottom: 10px;
-				padding: 0px;
-			}
-		</style>
-	</head>
+<head>
+<meta charset="utf-8">
+<title>AdminWrap - Easy to Customize Bootstrap 4 Admin Template</title>
+<link rel="icon" type="image/png" sizes="16x16"
+	href="../assets/images/favicon.png">
+<link href="../assets/node_modules/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/colors/default.css" id="theme" rel="stylesheet">
+<link
+	href="../assets/node_modules/bootstrap/css/bootstrap-datetimepicker.min.css"
+	rel="stylesheet">
+<script src="../assets/node_modules/jquery/jquery.min.js"></script>
+<script src="../assets/node_modules/bootstrap/js/popper.min.js"></script>
+<script src="../assets/node_modules/bootstrap/js/bootstrap.min.js"></script>
+<script
+	src="../assets/node_modules/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+<script
+	src="../assets/node_modules/bootstrap/js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="js/perfect-scrollbar.jquery.min.js"></script>
+<script src="js/waves.js"></script>
+<script src="js/sidebarmenu.js"></script>
+<script src="js/custom.min.js"></script>
+<style type="text/css">
+.page-titles {
+	background: #f6f9fa;
+	margin-bottom: 10px;
+	padding: 0px;
+}
+</style>
+</head>
 
-	<body class="fix-header card-no-border fix-sidebar">
+<body class="fix-header card-no-border fix-sidebar">
 
-		<!-- 遮罩层 -->
-		<div class="preloader">
-			<div class="loader">
-				<div class="loader__figure"></div>
-				<p class="loader__label">请稍等。。。</p>
-			</div>
+	<!-- 遮罩层 -->
+	<div class="preloader">
+		<div class="loader">
+			<div class="loader__figure"></div>
+			<p class="loader__label">请稍等。。。</p>
 		</div>
+	</div>
 
-		<div id="main-wrapper">
-			<!-- 头 -->
-			<header class="topbar">
-				<nav class="navbar top-navbar navbar-expand-md navbar-light">
-					<!-- 图标 -->
-					<div style="border-bottom: 1px solid rgba(120, 130, 140, 0.13);" class="navbar-header">
-						<a class="navbar-brand" href="fristshow.html">
-							<b>
-                            <img style="height: 40px;width: 45px;" src="../assets/images/car.jpg" alt="homepage" class="dark-logo" />
-                            <img style="height: 20px;width: 100px;"src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
-                        </b>
-							<span>
-                         <img style="height: 50px;width: 180px;"src="../assets/images/partcar.png" alt="homepage" class="dark-logo" />
-                         <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
-                        </span>
-						</a>
-					</div>
-					<!--  -->
-					<div style="height: 74px;" class="navbar-collapse">
-						<ul class="navbar-nav mr-auto">
+	<div id="main-wrapper">
+		<!-- 头 -->
+		<header class="topbar">
+			<nav class="navbar top-navbar navbar-expand-md navbar-light">
+				<!-- 图标 -->
+				<div style="border-bottom: 1px solid rgba(120, 130, 140, 0.13);"
+					class="navbar-header">
+					<a class="navbar-brand" href="fristshow.html"> <b> <img
+							style="height: 40px; width: 45px;" src="../assets/images/car.jpg"
+							alt="homepage" class="dark-logo" /> <img
+							style="height: 20px; width: 100px;"
+							src="../assets/images/logo-light-icon.png" alt="homepage"
+							class="light-logo" />
+					</b> <span> <img style="height: 50px; width: 180px;"
+							src="../assets/images/partcar.png" alt="homepage"
+							class="dark-logo" /> <img
+							src="../assets/images/logo-light-text.png" class="light-logo"
+							alt="homepage" />
+					</span>
+					</a>
+				</div>
+				<!--  -->
+				<div style="height: 74px;" class="navbar-collapse">
+					<ul class="navbar-nav mr-auto">
 
-						</ul>
-						<ul class="navbar-nav" style="float: right;">
-							<li class="nav-item dropdown" style="">
-								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">更多设置<i class="fa fa-cog" aria-hidden="true"></i></a>
-								<div class="dropdown-menu " style="min-width: 125px;">
-									<a class="dropdown-item" href="#">退出登录</a>
-									<a class="dropdown-item" href="#">修改密码</a>
-									
-								</div>
-							</li>
-						</ul>
+					</ul>
+					<ul class="navbar-nav" style="float: right;">
+						<li class="nav-item dropdown" style=""><a
+							class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">更多设置<i
+								class="fa fa-cog" aria-hidden="true"></i></a>
+							<div class="dropdown-menu " style="min-width: 125px;">
+								<a class="dropdown-item" href="../logoutServlet">退出登录</a> <a
+									class="dropdown-item" href="changepsw.jsp">修改密码</a>
 
-					</div>
-				</nav>
-			</header>
-			<aside class="left-sidebar">
-				<div class="scroll-sidebar">
-					<nav class="sidebar-nav">
-						<ul id="sidebarnav">
-							<li class="active"><a class="waves-effect waves-dark" href="modperson.jsp"
-							aria-expanded="false"><i class="fa fa-address-card-o"></i><span
-								class="hide-menu">个人信息</span></a></li>
+							</div></li>
+					</ul>
+
+				</div>
+			</nav>
+		</header>
+		<aside class="left-sidebar">
+			<div class="scroll-sidebar">
+				<nav class="sidebar-nav">
+					<ul id="sidebarnav">
+						<li class="active"><a class="waves-effect waves-dark"
+							href="modperson.jsp" aria-expanded="false"><i
+								class="fa fa-address-card-o"></i><span class="hide-menu">个人信息</span></a></li>
 						<li><a class="waves-effect waves-dark" href="usersShow.jsp"
 							aria-expanded="false"><i class="fa fa-users"></i><span
 								class="hide-menu">用户信息</span></a></li>
@@ -93,7 +103,11 @@
 								class="hide-menu">车库信息</span></a></li>
 						<li><a class="waves-effect waves-dark"
 							href="../QSubServlet?id=${user.id}" aria-expanded="false"><i
-								class="fa fa-smile-o"></i><span class="hide-menu">车库操作</span></a></li>
+								class="fa fa-smile-o"></i><span class="hide-menu">我的预约</span></a></li>
+						<li class=""><a class="waves-effect waves-dark"
+							href="${pageContext.request.contextPath}/QoccupyServlet?id=${user.id}"
+							aria-expanded="false"><i class="fa fa-street-view"></i><span
+								class="hide-menu">占有车位</span></a></li>
 						<li><a class="waves-effect waves-dark" href="#"
 							aria-expanded="false"><i class="fa fa-file-text"
 								aria-hidden="true"></i><span class="hide-menu">出入记录</span></a></li>
@@ -103,26 +117,26 @@
 						<li><a class="waves-effect waves-dark" href="#"
 							aria-expanded="false"><i class="fa fa-question-circle"></i><span
 								class="hide-menu">关于我们</span></a></li>
-						</ul>
-					</nav>
-				</div>
-			</aside>
-			<div class="page-wrapper">
-				<div class="container-fluid">
-					<div class="row page-titles">
-						<div class="col-md-5 align-self-center">
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item active">完善个人信息</li>
-							</ol>
-						</div>
+					</ul>
+				</nav>
+			</div>
+		</aside>
+		<div class="page-wrapper">
+			<div class="container-fluid">
+				<div class="row page-titles">
+					<div class="col-md-5 align-self-center">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item active">完善个人信息</li>
+						</ol>
 					</div>
-					<div class="row">
-						<!-- Column -->
-						<div class="col-lg-4 col-xlg-3 col-md-5">
-							<div class="card">
-								<div class="card-body">
-									<center class="m-t-30"> 
-										<img src="../assets/images/users/5.jpg" class="img-circle"
+				</div>
+				<div class="row">
+					<!-- Column -->
+					<div class="col-lg-4 col-xlg-3 col-md-5">
+						<div class="card">
+							<div class="card-body">
+								<center class="m-t-30">
+									<img src="../assets/images/users/5.jpg" class="img-circle"
 										width="150" />
 									<h4 class="card-title m-t-10">
 										<c:if test="${empty user}">
@@ -148,17 +162,17 @@
 											</a>
 										</div>
 									</div>
-									</center>
-								</div>
+								</center>
 							</div>
 						</div>
-						<!-- Column -->
-						<!-- Column -->
-						<div class="col-lg-8 col-xlg-9 col-md-7">
-							<div class="card">
-								<div class="card-body">
-									<form class="form-horizontal form-material">
-										<c:if test="${empty admin}">
+					</div>
+					<!-- Column -->
+					<!-- Column -->
+					<div class="col-lg-8 col-xlg-9 col-md-7">
+						<div class="card">
+							<div class="card-body">
+								<form class="form-horizontal form-material">
+									<c:if test="${empty admin}">
 										<div class="form-group">
 											<label class="col-md-12"><h3 class="text-themecolor">使用名：</h3></label>
 											<div class="col-md-12">
@@ -167,7 +181,7 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-12">车牌号码：</label>
+											<label class="col-md-12"><h3 class="text-themecolor">车牌号码：</h3></label>
 											<div class="col-md-12">
 												<input id="licenseplate" type="text" placeholder="输入你的车牌号"
 													class="form-control form-control-line">
@@ -222,19 +236,21 @@
 											</div>
 										</div>
 									</c:if>
-									</form>
-								</div>
+								</form>
 							</div>
 						</div>
-						<!-- Column -->
 					</div>
-					<footer class="footer"> © 2018 Adminwrap by wrappixe - More Templates
-						<a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from
-						<a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a>
-					</footer>
+					<!-- Column -->
 				</div>
+				<footer class="footer">
+					© 2018 Adminwrap by wrappixe - More Templates <a
+						href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
+					- Collect from <a href="http://www.cssmoban.com/" title="网页模板"
+						target="_blank">网页模板</a>
+				</footer>
 			</div>
-			<script type="text/javascript">
+		</div>
+		<script type="text/javascript">
 				var id = $("#user_id").html();
 			var adminid = $("#admin_id").html();
 			
@@ -248,7 +264,8 @@
 						data:{
 							id:id
 						},
-						success:function(result){
+						success:function(result)
+						{
 							if(result.code==200){
 								alert("查询信息失败，请联系管理员！！");
 							}
@@ -346,6 +363,6 @@
 				});
 				}
 			</script>
-	</body>
+</body>
 
 </html>
